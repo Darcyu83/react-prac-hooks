@@ -1,0 +1,18 @@
+nav {
+  border-bottom: solid 1px;
+  padding-bottom: 1rem;
+  background-color: white;
+  padding: 30px;
+  margin: 0px 30px 20px 0px;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.3),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  width: 95%;
+}
+
+nav > a {
+  text-decoration: none;
+}
+
+body {
+  background-color: rgb(236, 243, 243);
+}
