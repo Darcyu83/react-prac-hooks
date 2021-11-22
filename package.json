@@ -15,8 +15,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+<<<<<<< HEAD
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
+=======
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+>>>>>>> parent of a1e2dd5 (initiate)
   },
   "eslintConfig": {
     "extends": [
