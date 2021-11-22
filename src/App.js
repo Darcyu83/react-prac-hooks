@@ -13,6 +13,8 @@ import { Usefadein } from "./components/Usefadein";
 import { Usenetwork } from "./components/Usenetwork";
 import { Usescroll } from "./components/Usescroll";
 import { Usefullscreen } from "./components/Usefullscreen";
+import { Usenotification } from "./components/Usenotification";
+import { Useaxios } from "./components/Useaxios";
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
             <Route path="usenetwork" element={<Usenetwork />}></Route>
             <Route path="usescroll" element={<Usescroll />}></Route>
             <Route path="usefullscreen" element={<Usefullscreen />}></Route>
+            <Route path="usenotification" element={<Usenotification />}></Route>
+            <Route path="useaxios" element={<Useaxios />}></Route>
           </Route>
         </Routes>
       </Router>

@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import defaultAxios from "axios";
 
 export const useInput = (initialValue, validator) => {
   const [value, setValue] = useState(initialValue);
@@ -194,4 +195,55 @@ export const useFullscreen = (callback) => {
   };
 
   return { element, triggerFull, exitFull };
+};
+
+export const useNotification = (title, option) => {
+  const fireNotif = () => {
+    if (Notification.permission !== "granted") {
+      Notification.requestPermission().then((permission) => {
+        console.log(permission);
+        if (permission === "granted") {
+          new Notification(title, option);
+        } else {
+          return;
+        }
+      });
+    } else {
+      new Notification(title, option);
+    }
+  };
+
+  useEffect(() => {
+    if (!"Notification" in window) {
+      alert("This browser does not support desktop notification");
+      return;
+    }
+  }, []);
+  return fireNotif;
+};
+
+export const useAxios = (option, axiosInstance = defaultAxios) => {
+  const [state, setState] = useState({
+    isLoading: true,
+    error: null,
+    data: null,
+  });
+
+  const [trigger, setTrigger] = useState(0);
+  const refetch = () => {
+    setState({ isLoading: true, ...state });
+    setTrigger(Date.now());
+  };
+  useEffect(() => {
+    if (!option.url) return;
+    axiosInstance(option)
+      .then((data) => {
+        setState({ ...state, isLoading: false, data });
+      })
+      .catch((error) => {
+        setState({ ...state, isLoading: false, error });
+      });
+  }, [trigger]);
+
+  return { ...state, refetch };
 };

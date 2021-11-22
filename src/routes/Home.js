@@ -130,6 +130,24 @@ function Home() {
           }}
         >
           Hook : useFullScreen
+        </NavLink>{" "}
+        |{" "}
+        <NavLink
+          to="usenotification"
+          style={({ isActive }) => {
+            return { color: isActive ? "blue" : "" };
+          }}
+        >
+          Hook : useNotification
+        </NavLink>{" "}
+        |{" "}
+        <NavLink
+          to="useaxios"
+          style={({ isActive }) => {
+            return { color: isActive ? "blue" : "" };
+          }}
+        >
+          Hook : useAxios
         </NavLink>
       </nav>
       <Outlet />
