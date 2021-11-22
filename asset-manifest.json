@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-prac-hooks/static/css/main.d9df9d7c.chunk.css",
-    "main.js": "/react-prac-hooks/static/js/main.705a3c10.chunk.js",
-    "main.js.map": "/react-prac-hooks/static/js/main.705a3c10.chunk.js.map",
+    "main.js": "/react-prac-hooks/static/js/main.7be981c8.chunk.js",
+    "main.js.map": "/react-prac-hooks/static/js/main.7be981c8.chunk.js.map",
     "runtime-main.js": "/react-prac-hooks/static/js/runtime-main.8e9aae33.js",
     "runtime-main.js.map": "/react-prac-hooks/static/js/runtime-main.8e9aae33.js.map",
     "static/js/2.9d1eb69e.chunk.js": "/react-prac-hooks/static/js/2.9d1eb69e.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.8e9aae33.js",
     "static/js/2.9d1eb69e.chunk.js",
     "static/css/main.d9df9d7c.chunk.css",
-    "static/js/main.705a3c10.chunk.js"
+    "static/js/main.7be981c8.chunk.js"
   ]
 }
